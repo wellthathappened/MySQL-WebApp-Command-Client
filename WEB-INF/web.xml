@@ -1,0 +1,34 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+      http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+   version="2.4">
+
+   <!-- General description of your Web application -->
+   <display-name>
+      CNT 4714 Remote Database Management System by Ian Lewis
+   </display-name>
+
+   <description>
+      This servlet allows the user to send SQL commands and recieve SQL results from a MySQL server.
+   </description>
+
+   <!-- Servlet definitions -->
+   <servlet>
+      <servlet-name>handler</servlet-name>
+
+      <description>
+         This is the second-tier Java servlet that interfaces between the homepage and the MySQL server.
+      </description>
+
+      <servlet-class>
+         SQLHandler
+      </servlet-class>
+   </servlet>
+
+   <!-- Servlet mappings -->
+   <servlet-mapping>
+      <servlet-name>handler</servlet-name>
+      <url-pattern>/handler</url-pattern>
+   </servlet-mapping>
+</web-app>
